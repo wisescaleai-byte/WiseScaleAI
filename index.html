@@ -63,7 +63,8 @@
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI Training & Workshops", "description": "Practical, responsible AI training for teams, organizations, and community groups." } },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Everyday AI Coaching", "description": "One-on-one help getting comfortable and confident with AI tools." } },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI-Built Slide Decks", "description": "Polished presentation decks built with AI. You choose from 3 designs, and we handle the rest." } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Simple Websites", "description": "Clean, simple websites for small businesses, so customers can find you and reach you." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Websites", "description": "Clean, professional websites for small businesses, so customers can find you and reach you." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Website Audits", "description": "A full checkup of your website for Google search, AI search (ChatGPT, Google AI, Perplexity), speed, mobile, security, and leads, with a prioritized fix list." } },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI Agent Builds", "description": "A starter AI agent set up for your business to take everyday, repetitive tasks off your plate." } }
         ]
       },
@@ -100,7 +101,7 @@
         { "@type": "Question", "name": "What is a free AI business audit?", "acceptedAnswer": { "@type": "Answer", "text": "A friendly conversation where we look at how you run your business and point out where AI can save you time, money, and stress. No pressure and no tech knowledge needed." } },
         { "@type": "Question", "name": "Do I need to be tech-savvy?", "acceptedAnswer": { "@type": "Answer", "text": "Not at all. We teach in plain English and start wherever you are." } },
         { "@type": "Question", "name": "Who does WiseScaleAI work with?", "acceptedAnswer": { "@type": "Answer", "text": "Entrepreneurs, small business owners, content creators, everyday people, and community organizations like libraries, schools, and faith groups." } },
-        { "@type": "Question", "name": "What services does WiseScaleAI offer?", "acceptedAnswer": { "@type": "Answer", "text": "Free AI business audits, AI training and workshops, everyday AI coaching, AI-built slide decks, simple websites, and AI agent builds." } },
+        { "@type": "Question", "name": "What services does WiseScaleAI offer?", "acceptedAnswer": { "@type": "Answer", "text": "Free AI business audits, AI training and workshops, everyday AI coaching, AI-built slide decks, websites, website audits, and AI agent builds." } },
         { "@type": "Question", "name": "Is AI safe to use for my business?", "acceptedAnswer": { "@type": "Answer", "text": "It can be when you use it responsibly. We show you how to protect your privacy and your customers' information." } },
         { "@type": "Question", "name": "Where are you located?", "acceptedAnswer": { "@type": "Answer", "text": "WiseScaleAI is 100% online, so we work with people anywhere in America." } },
         { "@type": "Question", "name": "How do I get started?", "acceptedAnswer": { "@type": "Answer", "text": "Book a free AI audit at calendly.com/wisescaleai or call 478-318-2965." } }
@@ -228,6 +229,16 @@ header.site{position:sticky;top:0;z-index:100;background:rgba(6,19,31,.92);backd
 .card .card-btn{margin-top:auto;padding-top:12px}
 .card .card-btn .btn{width:100%;font-size:16px}
 .card.serve{text-align:center;align-items:center}
+
+.audit-card{grid-column:1/-1;border-color:rgba(212,175,55,.45)}
+.audit-head{display:flex;gap:18px;align-items:flex-start}
+.audit-head .icon{flex:none}
+.audit-list{list-style:none;padding:0;margin:8px 0 20px;display:grid;grid-template-columns:1fr 1fr;gap:10px 28px}
+.audit-list li{position:relative;padding-left:26px;color:var(--muted);font-size:17px}
+.audit-list li::before{content:"✦";position:absolute;left:0;color:var(--gold)}
+.audit-list strong{color:#fff}
+.audit-card .card-btn .btn{width:auto;min-width:280px}
+@media (max-width:640px){.audit-head{flex-direction:column;gap:0}.audit-list{grid-template-columns:1fr}.audit-card .card-btn .btn{width:100%;min-width:0}}
 
 /* why */
 .why-list{list-style:none;padding:0;margin:0 auto;max-width:900px;display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
@@ -511,8 +522,8 @@ footer .copy{color:#D7DEE5;font-size:15px;margin:0}
       </article>
       <article class="card">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/></svg></div>
-        <h3>Simple Websites</h3>
-        <p>Clean, simple websites for small businesses, so customers can find you and reach you.</p>
+        <h3>Websites</h3>
+        <p>Clean, professional websites for small businesses, so customers can find you and reach you.</p>
         <div class="card-btn"><a class="btn btn-outline" href="#contact" data-topic="Website">Get a Website</a></div>
       </article>
       <article class="card">
@@ -520,6 +531,26 @@ footer .copy{color:#D7DEE5;font-size:15px;margin:0}
         <h3>AI Agent Builds</h3>
         <p>A starter AI agent set up for your business to take everyday, repetitive tasks off your plate.</p>
         <div class="card-btn"><a class="btn btn-outline" href="#contact" data-topic="AI Agent Build">Ask About an Agent</a></div>
+      </article>
+      <article class="card audit-card">
+        <div class="audit-head">
+          <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 8h18"/><circle cx="11" cy="13" r="2.5"/><path d="M13 15l2.5 2.5"/></svg></div>
+          <div>
+            <h3>Website Audits</h3>
+            <p>Already have a website? I give it a full checkup and show you exactly what's helping, what's hurting, and what to fix first. Here's what you get:</p>
+          </div>
+        </div>
+        <ul class="audit-list">
+          <li><strong>Google search check:</strong> page titles, descriptions, headings, and keywords</li>
+          <li><strong>AI search check:</strong> whether ChatGPT, Google AI, and Perplexity can find, understand, and recommend you</li>
+          <li><strong>Speed and mobile test:</strong> how fast your site loads and how it looks on a phone</li>
+          <li><strong>Security check:</strong> your https padlock and domain setup</li>
+          <li><strong>Broken things report:</strong> broken links, missing images, and forms that don't send</li>
+          <li><strong>Lead check:</strong> whether visitors can easily book, call, or contact you</li>
+          <li><strong>Google visibility check:</strong> whether your site shows up when people search your business name</li>
+          <li><strong>Your fix list:</strong> a plain-English action plan, most important fixes first</li>
+        </ul>
+        <div class="card-btn"><a class="btn btn-gold" href="#contact" data-topic="Website Audit">Request a Website Audit</a></div>
       </article>
     </div>
   </div>
@@ -595,7 +626,7 @@ footer .copy{color:#D7DEE5;font-size:15px;margin:0}
       </div>
       <div class="faq-item">
         <h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a4" id="faq-q4">What services does WiseScaleAI offer?<span class="plus" aria-hidden="true">+</span></button></h3>
-        <div class="faq-a" id="faq-a4" role="region" aria-labelledby="faq-q4"><p>Free AI business audits, AI training and workshops, everyday AI coaching, AI-built slide decks, simple websites, and AI agent builds.</p></div>
+        <div class="faq-a" id="faq-a4" role="region" aria-labelledby="faq-q4"><p>Free AI business audits, AI training and workshops, everyday AI coaching, AI-built slide decks, websites, website audits, and AI agent builds.</p></div>
       </div>
       <div class="faq-item">
         <h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a5" id="faq-q5">Is AI safe to use for my business?<span class="plus" aria-hidden="true">+</span></button></h3>
@@ -645,6 +676,7 @@ footer .copy{color:#D7DEE5;font-size:15px;margin:0}
                 <option>AI Coaching</option>
                 <option>Slide Deck</option>
                 <option>Website</option>
+                <option>Website Audit</option>
                 <option>AI Agent Build</option>
                 <option>Other</option>
               </select>
@@ -667,7 +699,7 @@ footer .copy{color:#D7DEE5;font-size:15px;margin:0}
     <ul>
       <li><a href="#free-guide">Free ChatGPT prompt guide: get yours</a></li>
       <li><a href="https://calendly.com/wisescaleai" target="_blank" rel="noopener">Book your free AI business audit</a></li>
-      <li>Slide decks · Simple websites · AI agent builds</li>
+      <li>Slide decks · Websites · Website audits · AI agent builds</li>
       <li>Human Wisdom + AI Power · I Bring Solutions.</li>
       <li>Plain-English AI. No tech background needed.</li>
       <li>Quick tip: Ask AI to "check your work and fix any mistakes"</li>
@@ -676,7 +708,7 @@ footer .copy{color:#D7DEE5;font-size:15px;margin:0}
     <ul aria-hidden="true">
       <li><a href="#free-guide" tabindex="-1">Free ChatGPT prompt guide: get yours</a></li>
       <li><a href="https://calendly.com/wisescaleai" target="_blank" rel="noopener" tabindex="-1">Book your free AI business audit</a></li>
-      <li>Slide decks · Simple websites · AI agent builds</li>
+      <li>Slide decks · Websites · Website audits · AI agent builds</li>
       <li>Human Wisdom + AI Power · I Bring Solutions.</li>
       <li>Plain-English AI. No tech background needed.</li>
       <li>Quick tip: Ask AI to "check your work and fix any mistakes"</li>
